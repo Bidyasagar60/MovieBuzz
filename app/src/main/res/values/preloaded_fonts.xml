@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/bungee</item>
+        <item>@font/chewy</item>
+        <item>@font/limelight</item>
+        <item>@font/quando</item>
+        <item>@font/rozha_one</item>
+    </array>
+</resources>

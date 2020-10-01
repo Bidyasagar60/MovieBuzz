@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/app_background"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        tools:context=".View.MovieDetailActivity">
+
+        <ImageView
+            android:id="@+id/Movie_poster"
+            android:layout_width="100dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@string/todo" />
+        <ImageView
+            android:id="@+id/Movie_poster_backdrop"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@id/Movie_poster"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/MovieTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_below="@id/Movie_poster"
+            android:fontFamily="@font/quando"
+            android:textColor="@color/movie_hading"
+            android:textSize="28sp" />
+        <LinearLayout
+            android:id="@+id/MovieGeneric"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@id/MovieTitle">
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Generic  "
+                android:fontFamily="@font/verdana"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/Movie_Generics"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.5"
+                android:fontFamily="@font/verdana"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/MovieRatingBarH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/MovieGeneric">
+
+
+
+        <TextView
+            android:id="@+id/MovieRatingTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/rating"
+            android:fontFamily="@font/verdana"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+             />
+
+       <androidx.cardview.widget.CardView
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           app:cardBackgroundColor="@android:color/transparent"
+           app:cardElevation="0dp"
+           android:layout_weight="3.5">
+
+           <RatingBar
+               android:id="@+id/MovieRating"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               style="?android:attr/ratingBarStyleSmall"
+               android:theme="@style/MyRatingBar"
+               android:textColor="@android:color/white"
+               android:layout_marginTop="4dp"
+               android:stepSize="0.1"
+
+               />
+
+       </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/MovieReleaseDateH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/MovieRatingBarH">
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Release Date   "
+                android:fontFamily="@font/verdana"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:inputType="textMultiLine"
+                />
+
+            <TextView
+                android:id="@+id/MovieReleaseDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.5"
+                android:fontFamily="@font/verdana"
+                android:inputType="textNoSuggestions"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/MovieLanguageH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/MovieReleaseDateH">
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Language   "
+                android:fontFamily="@font/verdana"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:inputType="textMultiLine"
+                />
+
+            <TextView
+                android:id="@+id/MovieLanguage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.5"
+                android:fontFamily="@font/verdana"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/StoryTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/MovieLanguageH">
+
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Writer   "
+            android:fontFamily="@font/verdana"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:inputType="textMultiLine"
+            />
+
+            <TextView
+                android:id="@+id/StoryWriter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.5"
+                android:fontFamily="@font/verdana"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/DirectorTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/StoryTitle">
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Director  "
+                android:fontFamily="@font/verdana"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/Director"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.5"
+                android:fontFamily="@font/verdana"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ProducerTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/DirectorTitle">
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Producer "
+                android:fontFamily="@font/verdana"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/Producer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.5"
+                android:fontFamily="@font/verdana"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/CastTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ProducerTitle"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/verdana"
+            android:text="Cast"
+            android:textColor="@color/sub_hading"
+            android:textSize="24sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/CastRc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_below="@id/CastTitle"
+            android:background="@color/app_background"
+            />
+
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/OverViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/CastRc"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/verdana"
+            android:text="@string/overview"
+            android:textColor="@color/sub_hading"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/Overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/OverViewTitle"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/verdana"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/TrailerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Overview"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/verdana"
+            android:text="@string/trailer"
+            android:textColor="@color/sub_hading"
+            android:textSize="24sp" />
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/TrailerView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/TrailerTitle"
+            android:layout_margin="10dp"
+            app:autoPlay="false"
+            app:useWebUi="true" />
+
+
+
+        <TextView
+            android:id="@+id/SimilarMovieRcTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TrailerView"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/verdana"
+            android:text="@string/simirlar_movies"
+            android:textColor="@color/sub_hading"
+            android:textSize="24sp" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/SimilarMoviesRc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="25dp"
+            android:layout_below="@id/SimilarMovieRcTitle"
+            android:background="@color/app_background"
+            />
+
+        <ProgressBar
+            android:id="@+id/progressbarD"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/moviebuzz_progressbar"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/CastTitle"/>
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+</ScrollView>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_popular"
+            android:title="Popular Movies" />
+        <item
+            android:id="@+id/topRatedMovieFragment"
+            android:icon="@drawable/ic_top"
+            android:title="Top Rated Movies"
+            />
+        <item
+            android:id="@+id/upcomingMovieFragment"
+            android:icon="@drawable/ic_upcoming"
+            android:title="Upcoming Movies" />
+    </group>
+</menu>

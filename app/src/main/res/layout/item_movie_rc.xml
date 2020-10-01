@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/movie"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_background">
+
+    <ImageView
+        android:id="@+id/MovieImageRc"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+         android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:id="@+id/MovieTitleRc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/MovieImageRc"
+        android:fontFamily="@font/quando"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/movie_hading"
+        android:textSize="24sp" />
+      <TextView
+          android:id="@+id/MovieRatingRc"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="15dp"
+          android:text="Rating : "
+          android:fontFamily="@font/verdana"
+          android:layout_toRightOf="@id/MovieImageRc"
+          android:layout_below="@id/MovieTitleRc"
+          android:textColor="@android:color/white"
+          android:textSize="16sp"
+          />
+    <RatingBar
+        android:id="@+id/movierating_home_rc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/MovieTitleRc"
+        android:layout_toRightOf="@id/MovieRatingRc"
+        style="?android:attr/ratingBarStyleSmall"
+        android:theme="@style/MyRatingBar"
+        android:stepSize="0.1"
+        android:numStars="5"
+        android:layout_marginTop="3dp"
+        />
+    <TextView
+        android:id="@+id/MovieReleaseDateRc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@font/verdana"
+        android:layout_toRightOf="@id/MovieImageRc"
+        android:layout_below="@id/MovieRatingRc"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        />
+    <TextView
+        android:id="@+id/MovieLanguageRc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@font/verdana"
+        android:layout_toRightOf="@id/MovieImageRc"
+        android:layout_below="@id/MovieReleaseDateRc"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        />
+
+
+
+
+
+</RelativeLayout>
